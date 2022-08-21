@@ -8,9 +8,6 @@ public class Automobile
     public int plate_num; 
     public String gear_type; 
     private int body_serail_num;
-    /**
-     * Constructor for objects of class Automobile
-     */
     public Automobile()
     {
         ManufactureCompany=null;
