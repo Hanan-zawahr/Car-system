@@ -1,40 +1,27 @@
 import java.util.Date;
-public class Engine
-{
-    public String Manufacture;  
-    public Date ManufactureDate;
-    public String Model;
-    public int Capacity;
-    public int Cylinders;
+import java.time.LocalDate;
+public class Engine {
+    public String manufacture;  
+    public Date manufactureDate;
+    public String model;
+    public int capacity;
+    public int cylinders;
     public String fuelType;
-    public Engine()
-    {
-        Manufacture=null;
-        ManufactureDate=null;
-        Model=null;
-        Capacity=0;
-        Cylinders=0;
-        fuelType=null;
+    public Engine () {
+        manufacture = "";
+        manufactureDate = ("1970/01/01");
+        model = "";
+        capacity = 0;
+        cylinders = 4;
+        fuelType = "unfound";
     }
-    public Engine(String Manufacture,Date ManufactureDate,String Model,
-    int Capacity,int Cylinders,String fuelType){
-        this.Manufacture=Manufacture;
-        this.ManufactureDate=ManufactureDate;
-        this.Model=Model;
-        this.Capacity=Capacity;
-        this.Cylinders=Cylinders;
-        this.fuelType=fuelType;
-    
-    }
-
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    //public int sampleMethod(int y)
-    {
-        // put your code here
+    public Engine (String manufacture,Date manufactureDate,String model,
+    int capacity,int cylinders,String fuelType) {
+        this.manufacture = manufacture;
+        this.manufactureDate = manufactureDate;
+        this.model = model;
+        this.capacity = capacity;
+        this.cylinders = cylinders;
+        this.fuelType = fuelType;
     }
 }

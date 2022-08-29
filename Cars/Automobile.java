@@ -1,44 +1,33 @@
+import java.text.parseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
-public class Automobile
-{
-    public String ManufactureCompany;
-    public Date ManufactureDate;   
-    public String Model;
-    public Engine Engine;
-    public int plate_num; 
-    public String gear_type; 
-    private int body_serail_num;
-    public Automobile()
-    {
-        ManufactureCompany=null;
-        ManufactureDate=null;
-        Model=null;
-        Engine=null;
-        plate_num=0;
-        gear_type=null;
-        body_serail_num=0;
+public class Automobile {
+    public String manufactureCompany;
+    public Date manufactureDate;   
+    public String model;
+    public Engine engine;
+    public int PLATE_NUM; 
+    public String GEAR_TYPE; 
+    private int BODY_SERAIL_NUM;
+    public Automobile() {
+        manufactureCompany = "";
+        manufactureDate = dateFormat.parse("1-1-1970");
+        model = "";
+        Engine = "";
+        PLATE_NUM = 0000;
+        GEAR_TYPE = "unfound";
+        BODY_SERAIL_NUM = 0;
     }
-    public Automobile(String ManufactureCompany,Date ManufactureDate,
-    String Model,Engine Engine,int plate_num,String gear_type,
-    int body_serail_num){
-        this.ManufactureCompany=ManufactureCompany;
-        this.ManufactureDate=ManufactureDate;
-        this.Model=Model;
-        this.Engine=Engine;
-        this.plate_num=plate_num;
-        this.gear_type=gear_type;
-        this.body_serail_num=body_serail_num;
-    }
-
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    //public int sampleMethod(int y)
-    {
-        // put your code here
-        
+    public Automobile (String manufactureCompany, Date manufactureDate,
+    String model, Engine engine, int PLATE_NUM, String GEAR_TYPE,
+    int BODY_SERAIL_NUM) {
+        this.SimpleDateFormat dateFormat = SimpleDateFormat("dd-MM-yyyy");
+        this.manufactureCompany = manufactureCompany;
+        this.manufactureDate = manufactureDate;
+        this.model = model;
+        this.engine = engine;
+        this.PLATE_NUM = PLATE_NUM;
+        this.GEAR_TYPE = GEAR_TYPE ;
+        this.BODY_SERAIL_NUM = BODY_SERAIL_NUM;
     }
 }

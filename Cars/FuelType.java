@@ -1,4 +1,5 @@
-public enum FuelType
-{
-    Diesel , Gasoline 
+public enum FuelType {
+    UNFOUND,
+    DIESEL,
+    GASOLINE 
 }
