@@ -7,7 +7,7 @@ public class Vehicle extends Automobile {
     {
         length = 1; 
         width = 1;
-        color = white ;
+        Color = "";
     }
     public Vehicle (int length,int width,Color Color) {
         this.length = length;

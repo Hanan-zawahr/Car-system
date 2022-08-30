@@ -9,7 +9,6 @@ public class Engine {
     public String fuelType;
     public Engine () {
         manufacture = "";
-        manufactureDate = ("1970/01/01");
         model = "";
         capacity = 0;
         cylinders = 4;
