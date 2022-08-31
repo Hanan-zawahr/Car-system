@@ -1,5 +1,5 @@
 import java.util.Date;
-public class Automobile {
+public class Automobile{
     public String manufactureCompany;
     public Date manufactureDate;   
     public String model;
@@ -7,7 +7,7 @@ public class Automobile {
     public int PLATE_NUM; 
     public String GEAR_TYPE; 
     private int BODY_SERAIL_NUM;
-    public Automobile() {
+    public Automobile(){
         manufactureCompany = "";
         model = "";
         engine = engine;
@@ -17,7 +17,7 @@ public class Automobile {
     }
     public Automobile (String manufactureCompany, Date manufactureDate,
     String model, Engine engine, int PLATE_NUM, String GEAR_TYPE,
-    int BODY_SERAIL_NUM) {
+    int BODY_SERAIL_NUM){
         this.manufactureCompany = manufactureCompany;
         this.manufactureDate = manufactureDate;
         this.model = model;
