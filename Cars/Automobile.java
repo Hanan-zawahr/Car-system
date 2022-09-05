@@ -1,29 +1,30 @@
 import java.util.Date;
-public class Automobile{
+public class Automobile {
     public String manufactureCompany;
     public Date manufactureDate;   
     public String model;
     public Engine engine;
-    public int PLATE_NUM; 
-    public String GEAR_TYPE; 
-    private int BODY_SERAIL_NUM;
-    public Automobile(){
-        manufactureCompany = "";
-        model = "";
+    public String plateNum; 
+    private GearType gearType; 
+    private String bodySerailNum;
+    public Automobile() {
+        manufactureCompany = "not specified";
+        manufactureDate = new Date(1-1-1970);
+        model = "not specified";
         engine = engine;
-        PLATE_NUM = 0000;
-        GEAR_TYPE = "unfound";
-        BODY_SERAIL_NUM = 0;
+        plateNum = "not appointed";
+        gearType = gearType.UNDEFINED;
+        bodySerailNum = "not appointed";
     }
-    public Automobile (String manufactureCompany, Date manufactureDate,
-    String model, Engine engine, int PLATE_NUM, String GEAR_TYPE,
-    int BODY_SERAIL_NUM){
+    public Automobile(String manufactureCompany, Date manufactureDate,
+    String model, Engine engine, String plateNum, GearType gearType,
+    String bodySerailNum) {
         this.manufactureCompany = manufactureCompany;
         this.manufactureDate = manufactureDate;
         this.model = model;
         this.engine = engine;
-        this.PLATE_NUM = PLATE_NUM;
-        this.GEAR_TYPE = GEAR_TYPE ;
-        this.BODY_SERAIL_NUM = BODY_SERAIL_NUM;
+        this.plateNum = plateNum;
+        this.gearType = gearType;
+        this.bodySerailNum = bodySerailNum;
     }
 }

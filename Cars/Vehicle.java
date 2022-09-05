@@ -1,14 +1,13 @@
-import java.awt.Color;
-public class Vehicle extends Automobile{
-    public int length;
-    public int width; 
-    public Color color;
-    public Vehicle(){
-        length = 1; 
-        width = 1;
-        color = "";
+public class Vehicle extends Automobile {
+    public double length;
+    public double width; 
+    public String color;
+    public Vehicle() {
+        length = 1.0; 
+        width = 1.0;
+        color = "white";
     }
-    public Vehicle(int length,int width,Color Color){
+    public Vehicle(double length, double width, String color) {
         this.length = length;
         this.width = width;
         this.color = color;

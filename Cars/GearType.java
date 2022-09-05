@@ -1,5 +1,5 @@
 public enum GearType {
-    UNFOUND,
+    UNDEFINED,
     NORMAL,
     AUTOmATIC;
 }

@@ -1,5 +1,5 @@
 public enum FuelType {
-    UNFOUND,
+    UNDEFINED,
     DIESEL,
     GASOLINE 
 }
