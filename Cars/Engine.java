@@ -1,6 +1,7 @@
 import java.util.Date;
 
 public class Engine {
+
     private String manufacture;
     private Date manufactureDate;
     private String model;
@@ -74,6 +75,9 @@ public class Engine {
     public void setFuelType(FuelType fuelType) {
         this.fuelType = fuelType;
     }
-}
     
-
+    @Override
+    public String toString(){
+        return "Engine["+capacity+" // "+cylinders+" // "+fuelType+"]";
+    }
+}

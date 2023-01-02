@@ -1,5 +1,5 @@
 import java.util.Date;
-import java.util.Scanner;
+
 public abstract class Automobile implements Add,Delete,Modify,Print {
 
     private String manufactureCompany;
@@ -14,9 +14,9 @@ public abstract class Automobile implements Add,Delete,Modify,Print {
         manufactureCompany = "not specified";
         manufactureDate = new Date(1 - 1 - 1970);
         model = "not specified";
-        engine = engine;
+        engine = new Engine();
         plateNum = "not appointed";
-        gearType = GearType.UNDEFINED; 
+         gearType = GearType.UNDEFINED; 
         bodySerailNum = "not appointed";
     }
 
@@ -89,4 +89,3 @@ public abstract class Automobile implements Add,Delete,Modify,Print {
     }
 
 }
-    

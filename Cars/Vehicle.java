@@ -1,5 +1,7 @@
 import java.util.Date;
+
 public abstract class Vehicle extends Automobile {
+
     private double length;
     private double width;
     private String color;
@@ -48,5 +50,3 @@ public abstract class Vehicle extends Automobile {
     }
     
 }
- 
-

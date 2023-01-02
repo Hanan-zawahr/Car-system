@@ -1,6 +1,10 @@
 import java.util.Date;
+import java.util.Date;
 import java.util.Scanner;
+
 public class Truck extends Vehicle {
+
+    private Scanner in = new Scanner(System.in);
     private double freeWeight;
     private double fullWight;
 
@@ -37,55 +41,43 @@ public class Truck extends Vehicle {
         this.freeWeight = freeWeight;
     }
 
+    //Override
+    public void add() {
+     //like add in car
+    }
+
+    //Override
+    public String delete() {
+           System.out.println("Please enter the bodySerailNum of the car that you want to delete it ");
+        String serialNum = in.next();
+        return serialNum;
+    }
+
+    //Override
+    public String modify() {
+      System.out.println("Please enter the bodySerailNum of the car that you want to modify it ");
+     String serialNum = in.next();
+     return serialNum;
+    }
+
+   @Override
+    public void printAll() {
+     //print all variables
+     System.out.println("Car["+this.getManufactureCompany()+" // "+this.getModel()+" // \n"+this.getEngine()+"\n // "+this.getGearType()+" // "+this.getLength()+" // "+this.freeWeight+" // "+this.fullWight+"]"+"\n");
+    }
+
     @Override
     public void add(Scanner in) {
-        System.out.print("Please enter the number of freeWeight : ");
-        setFreeWeight(in.nextDouble());
-        System.out.print("Please enter the number of fullWight : ");
-        setFullWight(in.nextDouble());
-        System.out.print("Please enter the number of Lingth : ");
-        setLength(in.nextDouble());
-        System.out.print("Please enter the number of width : ");
-        setWidth(in.nextDouble());
-        System.out.print("Please enter the color : ");
-        setColor(in.nextLine());
-        System.out.print("Please enter the name of manufactureCompany : ");
-        setManufactureCompany(in.nextLine());
-        System.out.print("Please enter the model : ");
-        setModel(in.nextLine());
-        System.out.print("Please enter the plateNum : ");
-        setPlateNum(in.nextLine());
-        System.out.print("Please enter the bodySerailNum : ");
-        setBodySerailNum(in.nextLine());
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     @Override
     public String delete(Scanner in) {
-           System.out.println("Please enter the bodySerailNum of the car that you want to delete it ");
-        String serialNum = in.next();
-        return serialNum;
-     
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     @Override
     public String modify(Scanner in) {
-        System.out.println("Please enter the bodySerailNum of the car that you want to modify it ");
-        String serialNum = in.next();
-         return serialNum;
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
-
-    @Override
-    public void printAll() {
-        System.out.print(freeWeight);
-        System.out.print(fullWight);
-        System.out.print(getLength());
-        System.out.print(getWidth());
-        System.out.print(getColor());
-        System.out.print(getManufactureCompany());
-        System.out.print(getModel());
-        System.out.print(getPlateNum());
-        System.out.print(getBodySerailNum());
-    }
-
 }
-    

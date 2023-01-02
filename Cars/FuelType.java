@@ -1,5 +1,7 @@
 public enum FuelType {
-    UNDEFINED,
-    DIESEL,
-    GASOLINE 
+    
+    DEISEL,
+    GASOLINE,
+    UNDEFINED
 }
+  
