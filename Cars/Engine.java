@@ -1,38 +1,19 @@
 import java.util.Date;
 
 public class Engine {
-
-    private String manufacture;
-    private Date manufactureDate;
-    private String model;
-    private int capacity;
-    private int cylinders;
-    private FuelType fuelType;
-
-    public Engine() {
-        manufacture = "not specified";
-        manufactureDate = new Date(1 - 1 - 1970);
-        model = "not specified";
-        capacity = 0;
-        cylinders = 4;
-        fuelType = fuelType.UNDEFINED;
-    }
-
-    public Engine(String manufacture, Date manufactureDate, String model,
-            int capacity, int cylinders, FuelType fuelType) {
-        this.manufacture = manufacture;
-        this.manufactureDate = manufactureDate;
-        this.model = model;
-        this.capacity = capacity;
-        this.cylinders = cylinders;
-        this.fuelType = fuelType;
-    }
+    
+    protected String manufacture;
+    protected Date manufactureDate;
+    protected String model;
+    protected int capacity;
+    protected int cylinders;
+    protected FuelType fuelType;
 
     public String getManufacture() {
         return manufacture;
     }
 
-    public void setManufacture(String manufacture) {
+     public void setManufacture(String manufacture) {
         this.manufacture = manufacture;
     }
 

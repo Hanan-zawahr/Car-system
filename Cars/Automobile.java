@@ -1,36 +1,14 @@
 import java.util.Date;
 
-public abstract class Automobile implements Add,Delete,Modify,Print {
+public class Automobile {
 
-    private String manufactureCompany;
-    private Date manufactureDate;
-    private String model;
-    private Engine engine;
-    private String plateNum;
-    private GearType gearType;
-    private String bodySerailNum;
-
-    public Automobile() {
-        manufactureCompany = "not specified";
-        manufactureDate = new Date(1 - 1 - 1970);
-        model = "not specified";
-        engine = new Engine();
-        plateNum = "not appointed";
-         gearType = GearType.UNDEFINED; 
-        bodySerailNum = "not appointed";
-    }
-
-    public Automobile(String manufactureCompany, Date manufactureDate,
-            String model, Engine engine, String plateNum, GearType gearType,
-            String bodySerailNum) {
-        this.manufactureCompany = manufactureCompany;
-        this.manufactureDate = manufactureDate;
-        this.model = model;
-        this.engine = engine;
-        this.plateNum = plateNum;
-        this.gearType = gearType;
-        this.bodySerailNum = bodySerailNum;
-    }
+    protected String manufactureCompany;
+    protected Date manufactureDate;
+    protected String model;
+    protected Engine engine;
+    protected String plateNum;
+    protected GearType gearType;
+    protected String bodySerailNum;
 
     public String getManufactureCompany() {
         return manufactureCompany;
