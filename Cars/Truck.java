@@ -1,6 +1,4 @@
 import java.util.Date;
-import java.util.Date;
-import java.util.Scanner;
 
 public class Truck extends Vehicle {
     private double freeWeight;
@@ -9,6 +7,16 @@ public class Truck extends Vehicle {
     public Truck() {
         freeWeight = 0.0;
         fullWight = 0.0;
+        length = 1.0;
+        width = 1.0;
+        color = "white";
+        manufactureCompany = "not specified";
+        manufactureDate = new Date(1 - 1 - 1970);
+        model = "not specified";
+        engine = engine;
+        plateNum = "not appointed";
+        gearType = GearType.UNDEFINED;
+        bodySerailNum = "not appointed";
     }
     
     public Truck(double freeWeight, double fullWight, double length, double width, String color, String manufactureCompany

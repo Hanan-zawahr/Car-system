@@ -1,5 +1,4 @@
 import java.util.Date;
-import java.util.Scanner;
 
 public class Car extends Vehicle {
     
@@ -9,6 +8,16 @@ public class Car extends Vehicle {
     public Car() {
         chairNum = 4 + 1;
         isFurnitreLeather = false;
+        length = 1.0;
+        width = 1.0;
+        color = "white";
+        manufactureCompany = "not specified";
+        manufactureDate = new Date(1 - 1 - 1970);
+        model =" not specified";
+        engine = engine ;
+        plateNum = "not appointed";
+        gearType = GearType.UNDEFINED;
+        bodySerailNum = "not appointed";
     }
     
     public Car(int chairNum, boolean isFurnitreLeather, double length, double width, String color, String manufactureCompany,

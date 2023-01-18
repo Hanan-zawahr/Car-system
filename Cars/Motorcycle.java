@@ -1,9 +1,7 @@
 import java.util.Date;
-import java.util.Scanner;
 
 public class Motorcycle extends Automobile {
 
-    public Scanner in = new Scanner(System.in);
     public double tierDiameter;
     public double length;
 

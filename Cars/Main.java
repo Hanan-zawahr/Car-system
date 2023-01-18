@@ -1,200 +1,161 @@
+import static java.lang.System.in;
+import java.text.SimpleDateFormat;
+import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.Date;
 
 public class Main {
-  
-    public static void main(String[] args) {
-        
-         Scanner in = new Scanner(System.in);//scanner for input
-        ArrayList<Car> carList = new ArrayList<>();//list of car
-        ArrayList<Motorcycle> motorcycleList = new ArrayList<>();//list of motorcycle
-        ArrayList<Truck> truckList = new ArrayList<>();//list of truck
-        
-        String msg = "Welcome";//to can change a message
-        char chooseVehicle;//to choose the vehicle
-        //---------------------engine
-        String manufacture = new manufacture();
-        Date engineManufactureDate = new engineManufactureDate();
-        String engineModel = new engineModel();
-        int capacity = new capacity();
-        int cylinders = new cylinders();
-        FuelType fuelType = new fuelType();
-        //----------------------automobile
-        String manufactureCompany=new manufactureCompany();
-        Date manufactureDate = new manufactureDate();
-        String model = new model();
-        String plateNum = new plateNum();
-        GearType gearType = new gearType();
-        String bodySerailNum = new bodySereailNum();
-        //------------------------vehicle
-        double length = new length();
-        double width = new width();
-        String color = new color();
-        
-        do {
-            System.out.println(msg + "\n"
-                    + "please choose a no. from 1 to 3\n"
-                    + "1- Cars \n2- Motorcycle \n3- Trucks\n0- Exit ");//menu
-            
-            chooseVehicle = in.next().charAt(0);
-            
-            switch (chooseVehicle) {
-                
-                case '1': {//Car                   
-                    System.out.println("please choose a no. from 1 to 4\n"
-                            + "1- Add \n2- Delete \n3- Modify \n4- Search");
-                               char choose;//to choose add,delete,modify,search
-                    choose = in.next().charAt(0);
-                    switch (choose) {
-                    case '1': {//AddCar
-                            //---------------------engine
-                            System.out.print("enter the manufacture:"); 
-                            manufacture = in.next();
-                            System.out.print("enter the engine ManufactureDate: ");
-                            engineManufactureDate = in.nextDate();
-                            System.out.print("enter the engine model: ");
-                            engineModel = in.next();
-                            System.out.print("enter the number of capacity: ");
-                            capacity = in.nextInt();
-                            System.out.print("Enter the number of cylinders:");
-                            cylinders = in.nextInt();
-                            //fuelType = in.next();
-                            //----------------------automobile
-                            System.out.print("Enter the name of the manufacture company:");
-                            manufactureCompany = in.next();
-                            System.out.print("Enter the date of the manufacture date:");
-                            manufactureDate = in.nextDate();
-                            System.out.print("Enter the model:");
-                            model = in.next();
-                            System.out.print("Enter the plate number:");
-                            plateNum = in.next();
-                            //gearType = in.next();
-                            bodySereailNum = in.next();
-                            //----------------------vehicle
-                            System.out.print("Enter the length vehicle :");
-                            length = in.nextDouble();
-                            System.out.print("Enter the width vehicle :");
-                            wigth = in.nextdouble();
-                            System.out.print("Enter the color vehicle :");
-                            color = in.next();
-                            //----------------------car
-                            System.out.print("Enter the number of the chairNum :");
-                            chairNum = in.next();
-                            System.out.print("Please answer with true or false if the car has FurnitreLeather? :");
-                            isFurnitreLeather = in.nextBoolean();
-                            
-                            Car car = new Car(1.0,1.0,manufactureCompany,"01-01-1097","Model","engine",1);
-                            Engine engine = new engine(manufacture,"01-01-1097",engineModel,0,4,1);
-                            
-                            carList.add(car);
-                            
-                            flush();
-                            String manufacture = "not specified";
-                            Date engineManufactureDate = new Date(1 - 1 - 1970);
-                            String engineModel = "not specified";
-                            int capacity = 0;
-                            int cylinders = 4;
-                            FuelType fuelType = FuelType.UNDEFINED;
-                            String manufactureCompany = "not specified";
-                            Date manufactureDate = new Date(1 - 1 - 1970);
-                            String model = "not specified";
-                            String plateNum = "not appointed";
-                            GearType gearType = GearType.UNDEFINED;
-                            String bodySerailNum = "not appointed";
-                    }
-                    case '2':{//delete
-                    System.out.println("Enter the bodySerailNum of the car you want to delete: ");
-                    for (int i = 0; i < motorcycleList.size(); i++) {
-                    if (motorcycleList.get(i).getBodySerailNum() == bodySerailNum) {
-                    motorcycleList.remove(i);
-                    System.out.println(" motorcycle with bodySerailNum " + bodySerailNum + " has been deleted from the list.");
-                    }
-                    } 
-                    break;
-                }
-                
-                case '2': {//Motorcycle
-                    System.out.println("please choose a no. from 1 to 4\n"
-                            + "1- Add \n2- Delete \n3- Modify \n4- Search");
-                               char choose;//to choose add,delete,modify,search
-                    choose = in.next().charAt(0);
-                    switch (choose) {
-                        case '1': {//AddMotorcycle
-                            //---------------------engine
-                            System.out.print("enter the manufacture:"); 
-                            manufacture = in.next();
-                            System.out.print("enter the engine ManufactureDate: ");
-                            engineManufactureDate = in.nextDate();
-                            System.out.print("enter the engine model: ");
-                            engineModel = in.next();
-                            System.out.print("enter the number of capacity: ");
-                            capacity = in.nextInt();
-                            System.out.print("Enter the number of cylinders:");
-                            cylinders = in.nextInt();
-  
-                            //----------------------automobile
-                            System.out.print("Enter the name of the manufacture company:");
-                            manufactureCompany = in.next();
-                            System.out.print("Enter the date of the manufacture date:");
-                            manufactureDate = in.nextDate();
-                            System.out.print("Enter the model:");
-                            model = in.next();
-                            System.out.print("Enter the plate number:");
-                            plateNum = in.next();
-                            //gearType = in.next();
-                            bodySereailNum = in.next();
-                            //----------------------motorcycle
-                            System.out.print("Enter the tier diameter Motorcycle");
-                            tierDiameter = in.nextDouble();
-                            System.out.print("Enter the length Motorcycle");
-                            length = in.nextDouble();
-                            
-                            Motorcycle motorcycle = new Motocycle(1.0,1.0,manufactureCompany,"01-01-1097",Model,engine,1);
-                            Engine engine = new engine(manufacture,"01-01-1097",engineModel,0,4,1);
-                            motorcycleList.add(motorcycle);
-                            
-                            flush();
-                            String manufacture = "not specified";
-                            Date engineManufactureDate = new Date(1 - 1 - 1970);
-                            String engineModel = "not specified";
-                            int capacity = 0;
-                            int cylinders = 4;
-                            FuelType fuelType = FuelType.UNDEFINED;
-                            String manufactureCompany = "not specified";
-                            Date manufactureDate = new Date(1 - 1 - 1970);
-                            String model = "not specified";
-                            String plateNum = "not appointed";
-                            GearType gearType = GearType.UNDEFINED;
-                            String bodySerailNum = "not appointed";
-                    }
-                    case '2':{//delete
-                    System.out.println("Enter the bodySerailNum of the car you want to delete: ");
-                    for (int i = 0; i < motorcycleList.size(); i++) {
-                    if (motorcycleList.get(i).getBodySerailNum() == bodySerailNum) {
-                    motorcycleList.remove(i);
-                    System.out.println(" motorcycle with bodySerailNum " + bodySerailNum + " has been deleted from the list.");
-                    }
-                    }  
-                    break;
-                }
-                case '3': {//Truck
-                    
-                    break;
-                }
-              
-                    case '0':{//Exit
-                        System.out.println("Bye");
-                            System.exit(0);
-                            break;
-                        }
-                default: {//else for vehicles
-                    System.out.println("\nWrong!..you have to just choose from 1 to 3...\n"
-                            + "Please try again");
-                    msg = "";
-                }
-            }
-        } while (true);
+
+    public void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        public String engineManufacture;
+        public Date engineManufactureDate;
+        public String engineModel;
+        public int capacity;
+        public int cylinders;
+        public FuelType fuelType;
+        //----------------------automobileVar
+        public String manufactureCompany;
+        public Date manufactureDate;
+        public String model;
+        public String platNum;
+        public GearType gearType;
+        public String bodySereailNum;
+        //----------------------specialVar
+        public Object specialVar1;
+        public Object specialVar2;
+        public Object specialVar3;
+        //----------------------list
+        ArrayList<Car> carList = new ArrayList<>();
+        ArrayList<Motorcycle> motorcycleList = new ArrayList<>();
+        ArrayList<Truck> truckList = new ArrayList<>();
+        String msg = "Welcome";
+        //----------------------date
+        String date = in.next();
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MMM-yyyy");
+        //----------------------fuelType
+        public FuelType fuelType(String value) {
+        if (value.equals("D") || value.equals("d") || value.equals("diesel") || value.equals("Diesel") || value.equals("DIESEL")) {
+            return FuelType.DEISEL;
+        } else if (value.equals("G") || value.equals("g") || value.equals("gasloin") || value.equals("Gasloin") || value.equals("GASOLINE")) {
+            return FuelType.GASOLINE;
+        } else {
+            System.out.println("Unrecognized option");
+            return FuelType.UNDEFINED;
+        }
+    }
+
+    public GearType gearType(String value) {
+        if (value.equals("N") || value.equals("n") || value.equals("normal") || value.equals("Normal") || value.equals("NORMAL")) {
+            return GearType.NORMAL;
+        } else if (value.equals("A") || value.equals("a") || value.equals("Automatic") || value.equals("automatic") || value.equals("AUTOMATIC")) {
+            return GearType.AUTOMATIC;
+        } else {
+            System.out.println("Unrecognized option");
+            return GearType.UNDEFINED;
+        }
 
     }
+
+    do {
+        System.out.println(msg + "\n"
+            + "please choose a no. from 1 to 3\n"
+            + "1- Cars \n2- Motorcycle \n3- Trucks\n0- Exit ");//menu
+        char chooseVehicle = in.next().charAt(0);
+        switch (chooseVehicle) {
+            case '1': {//Car                   
+                    System.out.println("please choose a no. from 1 to 4\n"
+                        + "1- Add \n2- Delete \n3- Modify \n4- Search");
+                    char choose = in.next().charAt(0);
+                    switch (choose) {
+                        case '1': {//AddCar
+                                //---------------------engine
+                                System.out.print("enter the manufacture:");
+                                manufacture = in.next();
+                                System.out.print("enter the engine ManufactureDate: ");
+                                Date engineManufactureDate = null;
+                                try {
+                                    engineManufactureDate = dateFormat.parse(date);
+                                } catch (parseException e) {
+                                    e.printStackTrace();
+                                }
+                                System.out.print("enter the engine model: ");
+                                engineModel = in.next();
+                                System.out.print("enter the number of capacity: ");
+                                capacity = in.nextInt();
+                                System.out.print("Enter the number of cylinders:");
+                                cylinders = in.nextInt();
+                                System.out.print("Enter the fuel type:");
+                                fuelType = in.next();    
+                                //----------------------automobile
+                                System.out.print("Enter the name of the manufacture company:");
+                                manufactureCompany = in.next();
+                                System.out.print("Enter the date of the manufacture date:");
+                                Date manufactureDate = null;
+                                try {
+                                    manufactureDate = dateFormat.parse(date);
+                                } catch (parseException e) {
+                                    e.printStackTrace();
+                                }
+                                System.out.print("Enter the model:");
+                                model = in.next();
+                                System.out.print("Enter the plate number:");
+                                platNum = in.next();
+                                System.out.print("Enter the gear Type:");
+                                gearType = in.next();      
+                                System.out.print("Enter the body sereail number:");
+                                bodySereailNum = in.next();
+                                //----------------------vehicle
+                                System.out.print("Enter the length vehicle :");
+                                double length = in.nextDouble();
+                                System.out.print("Enter the width vehicle :");
+                                double wigth = in.nextDouble();
+                                System.out.print("Enter the color vehicle :");
+                                String color = in.next();
+                                //----------------------car
+                                System.out.print("Enter the number of the chairNum :");
+                                String chairNum = in.next();
+                                System.out.print("Please answer with true or false if the car has FurnitreLeather? :");
+                                boolean isFurnitreLeather = in.nextBoolean();
+
+                                Car car = new Car(manufactureCompany,manufactureDate, model, platNum, gearType, bodySereailNum,engine,chairNum,isFurnitreLeather,
+                                        length,width,color);
+                                Engine engine = new engine(engineManufacture, engineManufactureDate, engineModel, capacity, cylinders, fuelType);
+                                carList.add(car);
+                                car.flush();
+                            }
+                        case '2': {//deleteCar
+                                System.out.println("Enter the bodySerailNum of the car you want to delete: ");
+                                bodySerailNum = scanner.nextInt();
+                                for (int i = 0; i < carList.size(); i++) {
+                                    if (carList.get(i).getBodySerailNum() == bodySerailNum) {
+                                        carList.remove(i);
+                                        System.out.println(" car with bodySerailNum " + bodySerailNum + " has been deleted from the list.");
+                                        return;
+                                    }
+                                }
+                                System.out.println("Vehicle not found");
+                            }
+                        case '3':{//modifyCar
+                                String serialNum = new Car().modify(in);
+                                for(int i=0;i<carList.size();i++){
+                                    if(carList.get(i).getBodySerailNum().equals(serialNum)){
+                                        carList.set(i,new car());
+                                    }
+                                    else
+                                        System.out.println("Not Found");
+                                }
+                            }
+
+                        default: {//else for car inputs
+                                System.out.println("\nWrong!..you have to just choose from 1 to 4...\n"
+                                    + "Please try again");
+                            }
+                            break;
+                    }
+
+                }
+        }while (true);
     }
+}
