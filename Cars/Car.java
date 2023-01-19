@@ -1,7 +1,7 @@
-import java.util.Date;
+import java.time.LocalDate;
 
 public class Car extends Vehicle {
-    
+
     private int chairNum;
     private boolean isFurnitreLeather;
 
@@ -12,16 +12,16 @@ public class Car extends Vehicle {
         width = 1.0;
         color = "white";
         manufactureCompany = "not specified";
-        manufactureDate = new Date(1 - 1 - 1970);
-        model =" not specified";
-        engine = engine ;
+        LocalDate.of(1970, 1, 1);
+        model = " not specified";
+        engine = engine;
         plateNum = "not appointed";
         gearType = GearType.UNDEFINED;
         bodySerailNum = "not appointed";
     }
-    
+
     public Car(int chairNum, boolean isFurnitreLeather, double length, double width, String color, String manufactureCompany,
-         Date manufactureDate, String model, Engine engine, String plateNum, GearType gearType, String bodySerailNum) {
+            LocalDate manufactureDate, String model, Engine engine, String plateNum, GearType gearType, String bodySerailNum) {
         this.chairNum = chairNum;
         this.isFurnitreLeather = isFurnitreLeather;
         this.length = length;
@@ -51,10 +51,10 @@ public class Car extends Vehicle {
     public void setChairNum(int chairNum) {
         this.chairNum = chairNum;
     }
-    
+
     public void print() {
-     //print all variables
-     System.out.println("Car["+this.getManufactureCompany()+" // "+this.getModel()+" // \n"+this.getEngine()+"\n // "+this.getGearType()+" // "+this.getLength()+"]"+"\n");
+        //print all variables
+        System.out.println("Car[" + this.getManufactureCompany() + " // " + this.getModel() + " // \n" + this.getEngine() + "\n // " + this.getGearType() + " // " + this.getLength() + "]" + "\n");
     }
 
 }

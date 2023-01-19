@@ -1,9 +1,9 @@
-import java.util.Date;
+import java.time.LocalDate;
 
 public class Automobile {
 
     protected String manufactureCompany;
-    protected Date manufactureDate;
+    protected LocalDate manufactureDate;
     protected String model;
     protected Engine engine;
     protected String plateNum;
@@ -18,11 +18,11 @@ public class Automobile {
         this.manufactureCompany = manufactureCompany;
     }
 
-    public Date getManufactureDate() {
+    public LocalDate getManufactureDate() {
         return manufactureDate;
     }
 
-    public void setManufactureDate(Date manufactureDate) {
+    public void setManufactureDate(LocalDate manufactureDate) {
         this.manufactureDate = manufactureDate;
     }
 

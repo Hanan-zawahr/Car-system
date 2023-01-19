@@ -1,4 +1,4 @@
-import java.util.Date;
+import java.time.LocalDate;
 
 public class Motorcycle extends Automobile {
 
@@ -10,10 +10,10 @@ public class Motorcycle extends Automobile {
         length = 1.0;
     }
 
-    public Motorcycle(double tierDiameter, double length, String manufactureCompany, Date manufactureDate, String model, Engine engine, String plateNum, GearType gearType, String bodySerailNum) {
+    public Motorcycle(double tierDiameter, double length, String manufactureCompany, LocalDate manufactureDate, String model, Engine engine, String plateNum, GearType gearType, String bodySerailNum) {
         this.tierDiameter = tierDiameter;
         this.length = length;
-        this.manufactureCompany= manufactureCompany;
+        this.manufactureCompany = manufactureCompany;
         this.manufactureDate = manufactureDate;
         this.model = model;
         this.engine = engine;
@@ -38,9 +38,8 @@ public class Motorcycle extends Automobile {
         this.tierDiameter = tierDiameter;
     }
 
-   //Override
     public void print() {
         //print all variables
-        System.out.println("Motorcycle["+this.getManufactureCompany()+" // "+this.getModel()+" // \n"+this.getEngine()+"\n // "+this.getGearType()+" // "+this.getTierDiameter()+" // "+this.getLength()+"]"+"\n");
+        System.out.println("Motorcycle[" + this.getManufactureCompany() + " // " + this.getModel() + " // \n" + this.getEngine() + "\n // " + this.getGearType() + " // " + this.getTierDiameter() + " // " + this.getLength() + "]" + "\n");
     }
 }

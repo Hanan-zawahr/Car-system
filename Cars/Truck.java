@@ -1,6 +1,7 @@
-import java.util.Date;
+import java.time.LocalDate;
 
 public class Truck extends Vehicle {
+
     private double freeWeight;
     private double fullWight;
 
@@ -11,16 +12,16 @@ public class Truck extends Vehicle {
         width = 1.0;
         color = "white";
         manufactureCompany = "not specified";
-        manufactureDate = new Date(1 - 1 - 1970);
+        LocalDate.of(1970, 1, 1);
         model = "not specified";
         engine = engine;
         plateNum = "not appointed";
         gearType = GearType.UNDEFINED;
         bodySerailNum = "not appointed";
     }
-    
-    public Truck(double freeWeight, double fullWight, double length, double width, String color, String manufactureCompany
-            , Date manufactureDate, String model, Engine engine, String plateNum, GearType gearType, String bodySerailNum) {
+
+    public Truck(double freeWeight, double fullWight, double length, double width, String color, String manufactureCompany,
+             LocalDate manufactureDate, String model, Engine engine, String plateNum, GearType gearType, String bodySerailNum) {
         this.freeWeight = freeWeight;
         this.fullWight = fullWight;
         this.length = length;
@@ -52,7 +53,7 @@ public class Truck extends Vehicle {
     }
 
     public void print() {
-     //print all variables
-     System.out.println("Car["+this.getManufactureCompany()+" // "+this.getModel()+" // \n"+this.getEngine()+"\n // "+this.getGearType()+" // "+this.getLength()+" // "+this.freeWeight+" // "+this.fullWight+"]"+"\n");
+        //print all variables
+        System.out.println("Car[" + this.getManufactureCompany() + " // " + this.getModel() + " // \n" + this.getEngine() + "\n // " + this.getGearType() + " // " + this.getLength() + " // " + this.freeWeight + " // " + this.fullWight + "]" + "\n");
     }
 }

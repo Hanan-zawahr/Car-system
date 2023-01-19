@@ -1,23 +1,23 @@
-import java.util.Date;
-
+import java.time.LocalDate;
 public class Engine {
-    
+
     protected String manufacture;
-    protected Date manufactureDate;
+    protected LocalDate manufactureDate;
     protected String model;
     protected int capacity;
     protected int cylinders;
     protected FuelType fuelType;
-    
-    public Engine (){
+
+    public Engine() {
         manufacture = "not specified";
-        manufactureDate = new Date(1-1-1970);
+        LocalDate.of(1970, 1, 1);
         model = "not specified";
         capacity = 0;
         cylinders = 4;
-        fuelType = fuelType.UNDEFINED;
+        fuelType = FuelType.UNDEFINED;
     }
-    public Engine(String manufacture, Date manufactureDate, String model, int capacity, int cylinders,FuelType fuelType){
+
+    public Engine(String manufacture, LocalDate manufactureDate, String model, int capacity, int cylinders, FuelType fuelType) {
         this.manufacture = manufacture;
         this.manufactureDate = manufactureDate;
         this.model = model;
@@ -30,15 +30,15 @@ public class Engine {
         return manufacture;
     }
 
-     public void setManufacture(String manufacture) {
+    public void setManufacture(String manufacture) {
         this.manufacture = manufacture;
     }
 
-    public Date getManufactureDate() {
+    public LocalDate getManufactureDate() {
         return manufactureDate;
     }
 
-    public void setManufactureDate(Date manufactureDate) {
+    public void setManufactureDate(LocalDate manufactureDate) {
         this.manufactureDate = manufactureDate;
     }
 
@@ -73,9 +73,8 @@ public class Engine {
     public void setFuelType(FuelType fuelType) {
         this.fuelType = fuelType;
     }
-    
-    @Override
-    public String toString(){
-        return "Engine["+capacity+" // "+cylinders+" // "+fuelType+"]";
+
+    public String toString() {
+        return "Engine[" + capacity + " // " + cylinders + " // " + fuelType + "]";
     }
 }

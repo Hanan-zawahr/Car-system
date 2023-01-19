@@ -1,11 +1,9 @@
-import java.util.Date;
-
 public class Vehicle extends Automobile {
 
     protected double length;
     protected double width;
     protected String color;
-    
+
     public String getColor() {
         return color;
     }
@@ -29,5 +27,5 @@ public class Vehicle extends Automobile {
     public void setWidth(double width) {
         this.width = width;
     }
-    
+
 }
