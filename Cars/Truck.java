@@ -1,59 +1,48 @@
-import java.time.LocalDate;
-
-public class Truck extends Vehicle {
-
+import java.util.Date;
+public class Truck extends Vehicle{
     private double freeWeight;
-    private double fullWight;
-
-    public Truck() {
+    private double fullWeight;
+    public Truck(){
         freeWeight = 0.0;
-        fullWight = 0.0;
+        fullWeight = 0.0;
         length = 1.0;
         width = 1.0;
         color = "white";
         manufactureCompany = "not specified";
-        LocalDate.of(1970, 1, 1);
-        model = "not specified";
+        manufactureDate = new Date(1970,1,1);
+        model = "not appointed";
         engine = engine;
         plateNum = "not appointed";
         gearType = GearType.UNDEFINED;
-        bodySerailNum = "not appointed";
+        bodySereailNum = "not appointed";
     }
-
-    public Truck(double freeWeight, double fullWight, double length, double width, String color, String manufactureCompany,
-             LocalDate manufactureDate, String model, Engine engine, String plateNum, GearType gearType, String bodySerailNum) {
+    public Truck(double freeWeight, double fullWeight, double length, double width, String color, String manufactureCompany, Date manufactureDate, String model, Engine engine, String plateNum, GearType gearType, String bodySereailNum){
         this.freeWeight = freeWeight;
-        this.fullWight = fullWight;
+        this.fullWeight = fullWeight;
         this.length = length;
         this.width = width;
         this.color = color;
         this.manufactureCompany = manufactureCompany;
-        this.manufactureDate = manufactureDate;
+        this.manufactureDate = new Date(1970,1,1);
         this.model = model;
         this.engine = engine;
         this.plateNum = plateNum;
-        this.gearType = gearType;
-        this.bodySerailNum = bodySerailNum;
+        this.gearType = GearType.UNDEFINED;
+        this.bodySereailNum = bodySereailNum;
     }
-
-    public double getFullWight() {
-        return fullWight;
-    }
-
-    public void setFullWight(double fullWight) {
-        this.fullWight = fullWight;
-    }
-
-    public double getFreeWeight() {
+    public double getFreeWeight(){
         return freeWeight;
     }
-
-    public void setFreeWeight(double freeWeight) {
+    public void setFreeWeight(double freeweight){
         this.freeWeight = freeWeight;
     }
-
-    public void print() {
-        //print all variables
-        System.out.println("Car[" + this.getManufactureCompany() + " // " + this.getModel() + " // \n" + this.getEngine() + "\n // " + this.getGearType() + " // " + this.getLength() + " // " + this.freeWeight + " // " + this.fullWight + "]" + "\n");
+    public double getFullWeight(){
+        return fullWeight;
+    }
+    public void setFfullWeight(double fullWeight){
+        this.fullWeight = fullWeight;
+    }
+    public void print(){
+       // System.out.print("Truck["+this.getManufactureCompany()+"//"+thisgetModel()+"//\n"+this.getEngine()+"\n //"+this.getGearType()+"//"+this.getLength()+"//"+this.freeWeight+"//"+this.fullWeight+"]"+"\n");
     }
 }

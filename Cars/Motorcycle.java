@@ -1,4 +1,4 @@
-import java.time.LocalDate;
+import java.util.Date;
 
 public class Motorcycle extends Automobile {
 
@@ -10,7 +10,7 @@ public class Motorcycle extends Automobile {
         length = 1.0;
     }
 
-    public Motorcycle(double tierDiameter, double length, String manufactureCompany, LocalDate manufactureDate, String model, Engine engine, String plateNum, GearType gearType, String bodySerailNum) {
+    public Motorcycle(double tierDiameter, double length, String manufactureCompany, Date manufactureDate, String model, Engine engine, String plateNum, GearType gearType, String bodySereailNum) {
         this.tierDiameter = tierDiameter;
         this.length = length;
         this.manufactureCompany = manufactureCompany;
@@ -18,16 +18,8 @@ public class Motorcycle extends Automobile {
         this.model = model;
         this.engine = engine;
         this.plateNum = plateNum;
-        this.gearType = gearType;
-        this.bodySerailNum = bodySerailNum;
-    }
-
-    public double getLength() {
-        return length;
-    }
-
-    public void setLength(double length) {
-        this.length = length;
+        this.gearType = GearType.UNDEFINED;
+        this.bodySereailNum = bodySereailNum;
     }
 
     public double getTierDiameter() {
@@ -38,8 +30,16 @@ public class Motorcycle extends Automobile {
         this.tierDiameter = tierDiameter;
     }
 
+    public double getLength() {
+        return length;
+    }
+
+    public void setLength(double length) {
+        this.length = length;
+    }
+
     public void print() {
-        //print all variables
-        System.out.println("Motorcycle[" + this.getManufactureCompany() + " // " + this.getModel() + " // \n" + this.getEngine() + "\n // " + this.getGearType() + " // " + this.getTierDiameter() + " // " + this.getLength() + "]" + "\n");
+
+        //System.out.println("Motorcycle[" + this.getManufactureCompany() + "//" + this.getModel() + "// \n" + this.getEngine() + "\n //" + this.getGearType() + "//" + this.getTierDiameter() + "//"this.getLength() + "]" + "\n");
     }
 }

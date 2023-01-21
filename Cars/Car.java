@@ -1,27 +1,26 @@
-import java.time.LocalDate;
+import java.util.Date;
 
-public class Car extends Vehicle {
+public class Car extends Vehicle{
 
     private int chairNum;
     private boolean isFurnitreLeather;
 
     public Car() {
-        chairNum = 4 + 1;
+        chairNum = 1 + 4;
         isFurnitreLeather = false;
         length = 1.0;
         width = 1.0;
         color = "white";
         manufactureCompany = "not specified";
-        LocalDate.of(1970, 1, 1);
-        model = " not specified";
+        manufactureDate = new Date(1970,1,1);
+        model = "not appointed";
         engine = engine;
         plateNum = "not appointed";
         gearType = GearType.UNDEFINED;
-        bodySerailNum = "not appointed";
+        bodySereailNum = "not appointed";
     }
 
-    public Car(int chairNum, boolean isFurnitreLeather, double length, double width, String color, String manufactureCompany,
-            LocalDate manufactureDate, String model, Engine engine, String plateNum, GearType gearType, String bodySerailNum) {
+    public Car(int chairNum, boolean isFurnitreLeather, double length, double width, String color, String manufactureCompany, Date manufactureDate, String model, Engine engine, String plateNum, GearType gearType, String bodySereailNum) {
         this.chairNum = chairNum;
         this.isFurnitreLeather = isFurnitreLeather;
         this.length = length;
@@ -33,28 +32,27 @@ public class Car extends Vehicle {
         this.engine = engine;
         this.plateNum = plateNum;
         this.gearType = gearType;
-        this.bodySerailNum = bodySerailNum;
+        this.bodySereailNum = bodySereailNum;
     }
 
-    public boolean isIsFurnitreLeather() {
-        return isFurnitreLeather;
-    }
-
-    public void setIsFurnitreLeather(boolean isFurnitreLeather) {
-        this.isFurnitreLeather = isFurnitreLeather;
-    }
-
-    public int getChairNum() {
+    public int getChairNum(){
         return chairNum;
     }
 
-    public void setChairNum(int chairNum) {
+    public void setChairNum(int chairNum){
         this.chairNum = chairNum;
     }
 
-    public void print() {
-        //print all variables
-        System.out.println("Car[" + this.getManufactureCompany() + " // " + this.getModel() + " // \n" + this.getEngine() + "\n // " + this.getGearType() + " // " + this.getLength() + "]" + "\n");
+    public boolean getIsFurnitreLeather(){
+        return isFurnitreLeather;
     }
 
+    public void setIsFurnitreLeather(boolean isFurntierLeather){
+        this.isFurnitreLeather = isFurntierLeather;
+    }
+
+    public void print(){
+        //System.out.print("Car["+this.getManufactureCompany()+"//"+this.getModel()+"//\n"+this.getEngine()+"\n//"+this.getGearType()+"//"+this.getLength()+"]"+"\n");
+    }
 }
+
