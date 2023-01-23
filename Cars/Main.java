@@ -40,78 +40,83 @@ public class Main {
             int chooseVehicle = in.nextInt();
             switch (chooseVehicle) {
                 case 1: {//car
-                    System.out.println("please choose a no.from 1 to 4\n" + "1- Add \n2- Delete \n3- modify \n4- Search");
-                    int choose = in.nextInt();
-                    switch (choose) {
-                        case 1: {//AddCar
-                            //-------------------engine
-                            System.out.print("enter the manufacture :");
-                            manufacture = in.next();
-                            System.out.print("enter the engine manufacture date :");
-                            engineManufactureDate = in.next();
-                            Date newEngineManufactureDate = null;
-                            try {
-                                newEngineManufactureDate = sdf.parse(engineManufactureDate);
-                            } catch (ParseException e) {
-                                e.printStackTrace();
-                            }
-                            System.out.print("enter the engine model :");
-                            engineModel = in.next();
-                            System.out.print("enter the number of capacitty :");
-                            capacity = in.nextInt();
-                            System.out.print("enter the number of cylinders :");
-                            cylinders = in.nextInt();
-                            System.out.print("enter the fuel type :");
-                            fuelTypeFromUser = in.next();
-                            fuelType = fuelType(fuelTypeFromUser);
-                            //---------------------automoblie 
-                            System.out.print("enter the name of the manufacture company :");
-                            manufactureCompany = in.next();
-                            System.out.print("enter the Automoblie manufacture date :");
-                            automobileManufactureDate = in.next();
-                            Date newAutomobileManufactureDate = null;
-                            try {
-                                newAutomobileManufactureDate = sdf.parse(automobileManufactureDate);
-                            } catch (ParseException e) {
-                                e.printStackTrace();
-                            }
-                            System.out.print("enter the model :");
-                            model = in.next();
-                            System.out.print("enter the plate number :");
-                            plateNum = in.next();
-                            System.out.print("enter the gear type :");
-                            gearTypeFromUser = in.next();
-                            gearType = gearType(gearTypeFromUser);
-                            System.out.print("enter the body sereail number :");
-                            bodySereailNum = in.next();
-                            //-------------------------vehicle
-                            System.out.print("enter the length vehicle :");
-                            double length = in.nextDouble();
-                            System.out.print("enter the width vehicle :");
-                            double width = in.nextDouble();
-                            System.out.print("enter the color vehicle :");
-                            String color = in.next();
-                            //------------------------car
-                            System.out.print("enter the number of the chairNum :");
-                            int chairNum = in.nextInt();
-                            System.out.print("please answer with true or false if the car has furnitreleather? :");
-                            boolean isFurnitreleather = in.nextBoolean();
+                        System.out.println("please choose a no.from 1 to 4\n" + "1- Add \n2- Delete \n3- modify \n4- Search");
+                        int choose = in.nextInt();
+                        switch (choose) {
+                            case 1: {//AddCar
+                                    //-------------------engine
+                                    System.out.print("enter the manufacture :");
+                                    manufacture = in.next();
+                                    System.out.print("enter the engine manufacture date :");
+                                    engineManufactureDate = in.next();
+                                    Date newEngineManufactureDate = null;
+                                    try {
+                                        newEngineManufactureDate = sdf.parse(engineManufactureDate);
+                                    } catch (ParseException e) {
+                                        e.printStackTrace();
+                                    }
+                                    System.out.print("enter the engine model :");
+                                    engineModel = in.next();
+                                    System.out.print("enter the number of capacitty :");
+                                    capacity = in.nextInt();
+                                    System.out.print("enter the number of cylinders :");
+                                    cylinders = in.nextInt();
+                                    System.out.print("enter the fuel type :");
+                                    fuelTypeFromUser = in.next();
+                                    fuelType = fuelType(fuelTypeFromUser);
+                                    //---------------------automoblie 
+                                    System.out.print("enter the name of the manufacture company :");
+                                    manufactureCompany = in.next();
+                                    System.out.print("enter the Automoblie manufacture date :");
+                                    automobileManufactureDate = in.next();
+                                    Date newAutomobileManufactureDate = null;
+                                    try {
+                                        newAutomobileManufactureDate = sdf.parse(automobileManufactureDate);
+                                    } catch (ParseException e) {
+                                        e.printStackTrace();
+                                    }
+                                    System.out.print("enter the model :");
+                                    model = in.next();
+                                    System.out.print("enter the plate number :");
+                                    plateNum = in.next();
+                                    System.out.print("enter the gear type :");
+                                    gearTypeFromUser = in.next();
+                                    gearType = gearType(gearTypeFromUser);
+                                    System.out.print("enter the body sereail number6 :");
+                                    bodySereailNum = in.next();
+                                    //-------------------------vehicle
+                                    System.out.print("enter the length vehicle :");
+                                    double length = in.nextDouble();
+                                    System.out.print("enter the width vehicle :");
+                                    double width = in.nextDouble();
+                                    System.out.print("enter the color vehicle :");
+                                    String color = in.next();
+                                    //------------------------car
+                                    System.out.print("enter the number of the chairNum :");
+                                    int chairNum = in.nextInt();
+                                    System.out.print("please answer with true or false if the car has furnitreleather? :");
+                                    boolean isFurnitreleather = in.nextBoolean();
 
-                            Engine engine = new Engine(manufacture, newAutomobileManufactureDate, engineModel, capacity, cylinders, fuelType);
-                            Car car = new Car(chairNum, isFurnitreleather, length, width, color, manufactureCompany, newEngineManufactureDate, model, engine, plateNum, gearType, bodySereailNum);
-                            carList.add(car);
-                            printAll(carList);
-                            break;
-                            //flush();
-                        }
-                        default: {//else for car inputs
-                            System.out.println("\nWrong!..you have to just choose from 1 to 4...\n" + "Please try again");
-                        }
+                                    Engine engine = new Engine(manufacture, newAutomobileManufactureDate, engineModel, capacity, cylinders, fuelType);
+                                    Car car = new Car(chairNum, isFurnitreleather, length, width, color, manufactureCompany, newEngineManufactureDate, model, engine, plateNum, gearType, bodySereailNum);
+                                    carList.add(car);
+                                    carList.get(0).print();
+                                    System.out.print("Enter a position  to insert: ");
+                                    String element = in.next();
+                                    carList.insert(car);
+                                    for (Car cl : carList) {
+                                        System.out.println(cl.getModel());
+                                    }
+                                    printAll(carList);
+                                    break;
+                                }
+                            default: {//else for car inputs
+                                    System.out.println("\nWrong!..you have to just choose from 1 to 4...\n" + "Please try again");
+                                }
 
+                        }
                     }
-                    
-                }
-                //default first switch
+                    //default first switch
             }
 
         } while (true);
@@ -140,9 +145,9 @@ public class Main {
             return GearType.UNDEFINED;
         }
     }
-    public static void printAll(ArrayList<Car> carList ){
-        for (String str : carList){
-            System.out,print(str);
+    public static printAll(ArrayList<Car> carList) {
+        for (String cl : carList) {
+            System.out.println(cl.getName());
         }
     }
 }

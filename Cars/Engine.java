@@ -2,12 +2,12 @@ import java.util.Date;
 
 public class Engine {
 
-    protected String manufacture;
-    protected Date manufactureDate;
-    protected String model;
-    protected int capacity;
-    protected int cylinders;
-    protected FuelType fuelType;
+    public String manufacture;
+    public Date manufactureDate;
+    public String model;
+    public int capacity;
+    public int cylinders;
+    public FuelType fuelType;
 
     public Engine() {
         manufacture = "not specified";

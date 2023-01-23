@@ -43,6 +43,17 @@ public class Truck extends Vehicle{
         this.fullWeight = fullWeight;
     }
     public void print(){
-       // System.out.print("Truck["+this.getManufactureCompany()+"//"+thisgetModel()+"//\n"+this.getEngine()+"\n //"+this.getGearType()+"//"+this.getLength()+"//"+this.freeWeight+"//"+this.fullWeight+"]"+"\n");
+        System.out.print("freeWeight :" + this.getFreeWeight());
+        System.out.print("fullWeight :" + this.getFullWeight());
+        System.out.print("length :" + this.getLength());
+        System.out.print("width :" + this.getWidth());
+        System.out.print("color :" + this.getColor());
+        System.out.print("manufactureCompany :" + this.getManufactureCompany());
+        System.out.print("manufactureDate :" + this.getManufactureDate());
+        System.out.print("model :" + this.getModel());
+        System.out.print("engine :" + this.getEngine());
+        System.out.print("plateNum :" + this.getPlateNum());
+        System.out.print("gearType :" + this.getGearType());
+         System.out.print("bodySereailNum :" + this.getBodySereailNum());
     }
 }

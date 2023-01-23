@@ -39,7 +39,13 @@ public class Motorcycle extends Automobile {
     }
 
     public void print() {
-
-        //System.out.println("Motorcycle[" + this.getManufactureCompany() + "//" + this.getModel() + "// \n" + this.getEngine() + "\n //" + this.getGearType() + "//" + this.getTierDiameter() + "//"this.getLength() + "]" + "\n");
+        System.out.print("tierDiameter :" + this.getTierDiameter());
+        System.out.print("length :" + this.getLength());
+        System.out.print("manufactureDate :" + this.getManufactureDate());
+        System.out.print("model :" + this.getModel());
+        System.out.print("engine :" + this.getEngine());
+        System.out.print("plateNum :" + this.getPlateNum());
+        System.out.print("gearType :" + this.getGearType());
+         System.out.print("bodySereailNum :" + this.getBodySereailNum());
     }
 }

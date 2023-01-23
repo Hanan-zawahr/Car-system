@@ -4,7 +4,7 @@ public class Vehicle extends Automobile {
     protected double width;
     protected String color;
     
-    public double getlength(){
+    public double getLength(){
         return length;
     }
     public void setLength(double length){
