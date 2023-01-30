@@ -55,7 +55,6 @@ public class Car extends Vehicle{
         System.out.println("ManufactureDate => " + this.getManufactureDate());
         System.out.println(" Engine Model => " + this.getModel());
         System.out.println("ManufactureCompany => " + this.getManufactureCompany());
-        System.out.println("ManufactureDate => " + this.getManufactureDate());
         System.out.println("Model => " + this.getModel());
         System.out.println("plateNum => " + this.getPlateNum());
         System.out.println("GearType => " + this.getGearType());
@@ -66,5 +65,14 @@ public class Car extends Vehicle{
         System.out.println("IsFurnitreleather => " + this.getIsFurnitreLeather());
 
     }
+
+    public String toString() {
+        return  "ManufacturerDate : " + this.getManufactureDate() + " model : " + this.getModel() +
+        " ManufactureCompany : " + this.getManufactureCompany() + " PlateNum : " + this.getPlateNum() + " GearType: " +
+        this.getGearType() + " length: " + this.getLength() + " width: " + this.getWidth()+
+        " color: " + this.getColor() + " ChairNum: " + this.getChairNum() +
+        " IsFurnitreLeather: " + this.getIsFurnitreLeather();
+     }
+
 }
 
